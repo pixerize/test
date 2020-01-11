@@ -1,3 +1,4 @@
+# These are the Ruby requirements for building the site.
 source "https://rubygems.org"
 
 gem "jekyll", "3.8.4"

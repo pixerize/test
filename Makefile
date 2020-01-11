@@ -8,10 +8,10 @@ build.data:
 	python scripts/build_data.py
 
 build.site:
-	bundle exec jekyll build
+	bundle exec jekyll build --config=config_site.yml
 
 serve:
-	bundle exec jekyll serve --skip-initial-build
+	bundle exec jekyll serve --config=config_site.yml --skip-initial-build
 
 test: test.data test.site
 
