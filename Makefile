@@ -10,7 +10,7 @@ build.data:
 build.site:
 	bundle exec jekyll build --config=config_site.yml
 
-serve:
+serve: build
 	bundle exec jekyll serve --config=config_site.yml --skip-initial-build
 
 test: test.data test.site
