@@ -1,4 +1,5 @@
-# Prose configuration
+# This determines the schema that all indicator metadata must follow.
+# It also provides a configuration for the Prose.io file-editing service.
 prose:
   ignore: ['/scripts']
   metadata:
