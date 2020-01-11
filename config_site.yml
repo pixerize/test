@@ -101,11 +101,3 @@ plugins:
 # Apply any custom CSS.
 custom_css:
   - /assets/css/custom.css
-
-# These settings are not for Jekyll - they inform the sdg_build library.
-site_dir: _build
-schema_file: _prose.yml
-src_dir: ''
-translations:
-  - https://github.com/open-sdg/translations-un-sdg.git@1.0.0-rc1
-  - https://github.com/open-sdg/translations-open-sdg.git@1.0.0-rc1
