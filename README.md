@@ -4,7 +4,7 @@ This is a starter repository to help in implementing the [Open SDG](https://gith
 
 ## Overview
 
-This starter repo is called "simple" because it combines the data and site into one repository. This is in contrast to the [open-sdg-site-starter](https://github.com/open-sdg/open-sdg-site-starter) and [open-sdg-data-starter](https://github.com/open-sdg/open-sdg-data-starter) repos.
+This starter repo is called "simple" because it combines the data and site into one repository. This is in contrast to the [open-sdg-site-starter](https://github.com/open-sdg/open-sdg-site-starter) and [open-sdg-data-starter](https://github.com/open-sdg/open-sdg-data-starter) repos, which together make an alternative approach that splits the site and data into separate repositories.
 
 ## Requirements
 
