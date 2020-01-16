@@ -1,5 +1,5 @@
 install:
-	pip install -r requirements.txt
+	pip install -r requirements.txt --upgrade
 	bundle install
 
 build: build.data build.site
