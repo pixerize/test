@@ -62,6 +62,8 @@ menu:
     translation_key: menu.guidance
   - path: faq
     translation_key: menu.faq
+  - path: news
+    translation_key: menu.updates
 
 # Footer Menu
 footer_menu:
