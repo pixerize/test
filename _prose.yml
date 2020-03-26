@@ -210,13 +210,6 @@ prose:
             translation_key: metadata_fields.data_footnote
             help: Footnotes appear under the chart and by data tables
             scope: data
-      - name: data_geocode_regex
-        field:
-            element: text
-            label: GeoCode Regular Expression
-            translation_key: metadata_fields.data_geocode_regex
-            help: A regex on which geocodes to include
-            scope: data
       - name: data_keywords
         field:
             element: text
