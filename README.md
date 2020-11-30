@@ -1,6 +1,6 @@
 # Open SDG - Simple starter
 
-This is a starter repository to help in implementing the [Open SDG](https://github.com/open-sdg/open-sdg) platform. [See here for documentation](https://open-sdg.readthedocs.io) on Open SDG.
+This is a starter repository to help in implementing the [Open SDG](https://open-sdg.org) platform. [See here for documentation](https://open-sdg.readthedocs.io) on Open SDG.
 
 ## Overview
 
@@ -13,13 +13,23 @@ This starter repo is called "simple" because it combines the data and site into 
 
 ## Getting started
 
-1. Make your own copy of this repository, by pressing "Use this template" or going [here](https://github.com/brockfanning/open-sdg-simple-starter/generate) and filling out the form.
-2. Next, create a "personal access token" as described [here](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token), choosing the "Repo" permission, as indicated.
-3. At your new repository, choose "Settings" (top right) and then "Secrets" (left sidebar). Add a new secret named "token" and paste in your personal access token.
-4. Go to the "Actions" section of your repository. You will see a "Deploy to staging" job which failed.
-5. Click on "Deploy to staging" and then select the "Re-run all checks" option.
-6. Watch as the your site is built and deployed to GitHub.
-7. Afterwards, go back to your "Settings" page, and scroll down to the GitHub pages section. You should see "Your site is published at" with a link to your site.
+1. Make your own copy of this repository, by pressing "Use this template" or going [here](https://github.com/open-sdg/open-sdg-simple-starter/generate) and filling out the form.
+
+   > For "Repository name" you can enter "open-sdg-simple-starter" or whatever you would like. Note that if you do *not* use "open-sdg-simple-starter", you will need to perform an extra step at the end (see step 6).
+
+    When ready, press "Create repository from template".
+
+2. You will now be looking at your new repository. Some automated processes will already be started. To see them, click the "Actions" link. Wait until the "Initial commit" action stops spinning and changes from yellow to green.
+3. Click the "Settings" link and scroll down to the "Github Pages" section. In the dropdown beneath "Source" choose "gh-pages" and press "Save".
+4. Github will start to deploy your site behind the scenes. Wait about 1 minute, and then refresh the page.
+5. Again scroll down to the "Github Pages" section. You should now see a green success notice that says "Your site is published". Press the link to view your site.
+6. If (in step 1) you named your repository *anything other than* "open-sdg-simple-starter", your site will not look or behave correctly yet. To fix this, you will need to update your site's "baseurl" setting.
+    1. Go back to your repository on Github and click the "Code" link (top left).
+    2. In the list of files find the file called "config_site.yml" and click it.
+    3. Click the pencil icon towards the top right to edit this file.
+    4. On line #9, update the "baseurl" setting with your repository's name, preceded by a slash. For example, if you named your repository "my-repository", then set the "baseurl" to "/my-repository".
+    5. At the bottom press "Commit changes".
+    6. Watch the "Actions" section until the action stops spinning and changes from yellow to green. At this point, your site should look and behave correctly.
 
 ## Automated testing
 
