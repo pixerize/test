@@ -13,17 +13,15 @@ This starter repo is called "simple" because it combines the data and site into 
 
 ## Getting started
 
-1. Make your own copy of this repository, by pressing "Use this template" or going [here](https://github.com/open-sdg/open-sdg-simple-starter/generate) and filling out the form.
+1. Make your own copy of this repository, by pressing "Use this template" or going [here](https://github.com/open-sdg/open-sdg-simple-starter/generate) and filling out the form. **Make sure that you check the "Include all branches" box!** Other settings can be left alone.
 
-   > For "Repository name" you can enter "open-sdg-simple-starter" or whatever you would like. Note that if you do *not* use "open-sdg-simple-starter", you will need to perform an extra step at the end (see step 6).
+   > For "Repository name" you can enter "open-sdg-simple-starter" or whatever you would like. It is recommended to choose something unique and descriptive, such as "sdg-indicators-abc" (where "abc" is unique to your implementation). However note that if you do *not* use "open-sdg-simple-starter", you will need to perform an extra step at the end. Don't worry, this is not difficult and is covered in step 4 below.
 
     When ready, press "Create repository from template".
 
 2. You will now be looking at your new repository. Some automated processes will already be started. To see them, click the "Actions" link. Wait until the "Initial commit" action stops spinning and changes from yellow to green.
-3. Click the "Settings" link and scroll down to the "Github Pages" section. In the dropdown beneath "Source" choose "gh-pages" and press "Save".
-4. Github will start to deploy your site behind the scenes. Wait about 1 minute, and then refresh the page.
-5. Again scroll down to the "Github Pages" section. You should now see a green success notice that says "Your site is published". Press the link to view your site.
-6. If (in step 1) you named your repository *anything other than* "open-sdg-simple-starter", your site will not look or behave correctly yet. To fix this, you will need to update your site's "baseurl" setting.
+3. Click the "Settings" link and scroll down to the "Github Pages" section. You should see a green success notice that says "Your site is published". Press the link to view your site.
+4. If (in step 1) you named your repository *anything other than* "open-sdg-simple-starter", your site will appear jumbled and will have broken links. To fix this, you will need to update your site's "baseurl" setting.
     1. Go back to your repository on Github and click the "Code" link (top left).
     2. In the list of files find the file called "config_site.yml" and click it.
     3. Click the pencil icon towards the top right to edit this file.
