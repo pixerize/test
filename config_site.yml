@@ -9,7 +9,7 @@ title: Indicators For The Sustainable Development Goals
 baseurl: "/open-sdg-simple-starter"
 environment: staging
 source: www
-local_data_folder: _build
+remote_data_prefix: _build
 
 # The list of languages that are translated. The first one is the default.
 languages:
