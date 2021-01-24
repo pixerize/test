@@ -27,7 +27,12 @@ This starter repo is called "simple" because it combines the data and site into 
     3. Click the pencil icon towards the top right to edit this file.
     4. On line #9, update the "baseurl" setting with your repository's name, preceded by a slash. For example, if you named your repository "my-repository", then set the "baseurl" to "/my-repository".
     5. At the bottom press "Commit changes".
-    6. Watch the "Actions" section until the action stops spinning and changes from yellow to green. At this point, your site should look and behave correctly.
+    6. Almost done! We'll repeat the last few steps on another file. Again click the "Code" link in the top left.
+    7. In the list of files find the file called "config_data.yml" and click it.
+    8. Click the pencil icon towards the top right to edit this file.
+    9. On line #9, update the "docs_baseurl" setting with your repository's name, preceded by a slash. For example, if you named your repository "my-repository", then set the "docs_baseurl" to "/my-repository".
+    10. At the bottom press "Commit changes".
+    11. Watch the "Actions" section until all jobs stop spinning and change from yellow to green. At this point, your site should look and behave correctly.
 
 ## Automated testing
 
