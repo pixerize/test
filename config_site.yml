@@ -1,7 +1,7 @@
 # Jekyll configuration for Open SDG platform
 
 # Tell the Remote Theme plugin to use the Open SDG platform (Jekyll theme).
-remote_theme: open-sdg/open-sdg@master
+remote_theme: open-sdg/open-sdg@1.2.0
 
 # Replace this title as needed.
 title: Indicators For The Sustainable Development Goals
@@ -25,8 +25,19 @@ metadata_edit_url: http://prose.io/#my-org/my-repo/edit/develop/meta/[id].md
 create_indicators:
   layout: indicator
 create_goals:
-  layout: goal
-create_pages: true
+  layout: goal-by-target-vertical
+create_pages:
+  - folder: /
+    layout: frontpage-alt
+  - folder: /goals
+    layout: goals
+  - folder: /reporting-status
+    layout: reportingstatus
+  - filename: indicators.json
+    folder: /
+    layout: indicator-json
+  - folder: /search
+    layout: search
 
 #analytics:
 #  ga_prod: ''
@@ -46,32 +57,62 @@ country:
   name: Australia
   adjective: Australian
 
-# Optionally uncomment and update the settings below to control the frontpage heading and instructions.
-#frontpage_heading: Australian data for Sustainable Development Goal indicators
-#frontpage_instructions: Click on each goal, or <span id="jump-to-search"><a>search</a></span>, for Australian statistics for Sustainable Development Goal global indicators.
-
 # Optionally set a title/body for the frontpage banner. The defaults below point to a standard
 # translation, but feel free to change it as needed.
 frontpage_introduction_banner:
   title: frontpage.intro_title
   description: frontpage.intro_body
 
+frontpage_goals_grid:
+  title: Our data for Sustainable Development Goal indicators
+  description: Click on each goal for our Sustainable Development Goal global indicator data.
+
+frontpage_cards:
+  - title: frontpage.download_all
+    include: components/download-all-data.html
+  - title: Lorem ipsum
+    content: |
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis
+      cursus est sed dapibus.
+    button_label: Read more
+    button_link: https://example.com
+  - title: Nam vestibulum
+    content: |
+      Nam vestibulum, purus quis porttitor imperdiet, nisl sem mollis nisl, a
+      interdum risus enim vitae tortor. Donec feugiat accumsan rutrum.
+    button_label: Read more
+    button_link: https://example.com
+
+# Pages
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+  posts:
+    output: true
+    permalink: /news/:year/:month/:day/:title.html
+  indicators:
+    output: true
+  goals:
+    output: true
+
 # Menu
 menu:
   # Use these to customise the main navigation.
-  - path: reporting-status
+  - path: /goals
     # The "translation_key" refers to the key in the SDG Translations repository.
+    translation_key: general.goals
+  - path: /reporting-status
     translation_key: menu.reporting_status
-  - path: about
+  - path: /about
     translation_key: menu.about
-  - path: guidance
+  - path: /guidance
     translation_key: menu.guidance
-  - path: faq
+  - path: /faq
     translation_key: menu.faq
-  - path: news
+  - path: /news
     translation_key: menu.updates
 
-# Footer Menu
 footer_menu:
   - path: mailto:my-email-address@example.com
     translation_key: menu.contact_us
@@ -79,7 +120,7 @@ footer_menu:
     translation_key: general.twitter
   - path: https://facebook.com/MyFacebookAccount
     translation_key: general.facebook
-  - path: about/cookies-and-privacy
+  - path: /about/cookies-and-privacy/
     translation_key: menu.cookies
 
 # Configure the text (or "translation key") to be used on the
@@ -94,19 +135,6 @@ goal_image_base: https://open-sdg.github.io/sdg-translations/assets/img/goals
 plugins:
   - jekyll-remote-theme
   - jekyll-open-sdg-plugins
-
-# Pages
-collections:
-  pages:
-    output: true
-    permalink: /:path/
-  posts:
-    output: true
-    permalink: /news/:year/:month/:day/:title.html
-  indicators:
-    output: true
-  goals:
-    output: true
 
 # Exclude some files/folders.
 exclude:
@@ -133,3 +161,37 @@ exclude:
 #    max_zoom: 10
 #    subfolder: my-geojson-subfolder
 #    label: My map layer label (can be a translation key)
+
+# Recommend accessibility improvements.
+accessible_tabs: true
+accessible_charts: true
+
+# Specify any custom javascript files.
+custom_js:
+  - /assets/js/custom.js
+
+# Specify the format of the language toggles. Choices are:
+# "dropdown", "links", or "none"
+header_language_toggle: dropdown
+footer_language_toggle: none
+
+# Specify whether the Series disaggregation should be a toggle (like units).
+series_toggle: true
+
+# Control the behavior of breadcrumbs for certain types of content.
+breadcrumbs:
+  post:
+    - label: general.home
+      path: /
+    - label: menu.updates
+      path: /news
+  goal:
+    - label: general.home
+      path: /
+    - label: general.goals
+      path: /goals
+  indicator:
+    - label: general.home
+      path: /
+    - label: general.goals
+      path: /goals
